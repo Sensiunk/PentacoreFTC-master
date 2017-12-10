@@ -11,16 +11,16 @@ import com.qualcomm.robotcore.util.Range;
 /**
  * Created by manjeshpuram on 10/29/17.
  */
-@TeleOp(name="Pentacore TeleOp")
-@Disabled
+@TeleOp(name="Pentacore TeleOp Old Robot")
+//@Disabled
 public class PentacoreCompetitionBotOld extends LinearOpMode
 {
     private DcMotor motorRight; //Declare Right Motor
     private DcMotor motorLeft; //Declare Left Motor
     private DcMotor motorArm; //Declare Arm's Motor
 
-    private Servo rightServo; //Declare Right Servo
-    private Servo leftServo; //Declare Left Servo
+    private Servo rightServoClaw; //Declare Right Servo
+    private Servo leftServoClaw; //Declare Left Servo
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -30,11 +30,11 @@ public class PentacoreCompetitionBotOld extends LinearOpMode
 
         motorRight.setDirection(DcMotor.Direction.REVERSE);
 
-        leftServo = hardwareMap.servo.get("leftServo");
-        rightServo = hardwareMap.servo.get("rightServo");
+        leftServoClaw = hardwareMap.servo.get("leftServo");
+        rightServoClaw = hardwareMap.servo.get("rightServo");
 
-        rightServo.scaleRange(0.6, 1.0);
-        leftServo.scaleRange(0.0, 0.4);
+        rightServoClaw.scaleRange(0.6, 1.0);
+        leftServoClaw.scaleRange(0.0, 0.4);
 
         waitForStart();
 
@@ -76,13 +76,13 @@ public class PentacoreCompetitionBotOld extends LinearOpMode
 
             if (gamepad2.a) {
                 telemetry.log().add("Test1", "Test1");
-                rightServo.setPosition(Servo.MAX_POSITION);
-                leftServo.setPosition(Servo.MIN_POSITION);
+                rightServoClaw.setPosition(Servo.MAX_POSITION);
+                leftServoClaw.setPosition(Servo.MIN_POSITION);
             }
             if (gamepad2.b) {
                 telemetry.log().add("Test2", "Test2");
-                rightServo.setPosition(Servo.MIN_POSITION);
-                leftServo.setPosition(Servo.MAX_POSITION);
+                rightServoClaw.setPosition(Servo.MIN_POSITION);
+                leftServoClaw.setPosition(Servo.MAX_POSITION);
             }
 
             idle();

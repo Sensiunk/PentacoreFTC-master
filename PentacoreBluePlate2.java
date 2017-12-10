@@ -87,15 +87,15 @@ public class PentacoreBluePlate2 extends LinearOpMode
         double _leftAngleValue = 0.23; // Defaulting a value incase the vuforia doesn't work
         if (_placement.equals("RIGHT"))
         {
-            _leftAngleValue = 0.25;
+            _leftAngleValue = 0.27;
         }
         if (_placement.equals("CENTER"))
         {
-            _leftAngleValue = 0.24;
+            _leftAngleValue = 0.27;
         }
         if (_placement.equals("LEFT"))
         {
-            _leftAngleValue = 0.23;
+            _leftAngleValue = 0.27;
         }
 
 
@@ -108,7 +108,7 @@ public class PentacoreBluePlate2 extends LinearOpMode
         sleep(1000);
         leftServoClaw.setPosition(0.65);
         rightServoClaw.setPosition(0.05);
-        LinearSlide(0.15);
+        LinearSlide(0.25);
         sleep(250);
         LinearSlideStop();
         sleep(1);
@@ -155,7 +155,7 @@ public class PentacoreBluePlate2 extends LinearOpMode
             sleep(_sleeptime);
             colorServoLeft.setPosition(0.1);
             DriveBackward(-_move);
-            sleep(_sleeptime+300);
+            sleep(_sleeptime+600);
         }
         else
         {
@@ -166,12 +166,12 @@ public class PentacoreBluePlate2 extends LinearOpMode
         //turn right and move towards the crypto box
         StopDriving();
         sleep(1000);
-        RightTurn(0.23);
-        sleep(125);
+        LeftTurn(0.2);
+        sleep(200);
         StopDriving();
         sleep(1000);
         DriveForward(0.5);
-        sleep(1400);
+        sleep(1650);
         StopDriving();
         sleep(1000);
         LeftTurn(_leftAngleValue);

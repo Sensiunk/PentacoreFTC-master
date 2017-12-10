@@ -86,15 +86,15 @@ public class PentacoreRedPlate2 extends LinearOpMode
         double _rightAngleValue = 0.23; // Defaulting a value incase the vuforia doesn't work
         if (_placement.equals("LEFT"))
         {
-            _rightAngleValue = 0.25;
+            _rightAngleValue = 0.27;
         }
         if (_placement.equals("CENTER"))
         {
-            _rightAngleValue = 0.24;
+            _rightAngleValue = 0.27;
         }
         if (_placement.equals("RIGHT"))
         {
-            _rightAngleValue = 0.23;
+            _rightAngleValue = 0.27;
         }
 
         //move sensor arm down

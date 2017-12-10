@@ -62,6 +62,12 @@ public class PentacoreCompetitionBot extends LinearOpMode
             LeftSide = -gamepad1.left_stick_y;
             Slide = -gamepad2.right_stick_y;
 
+            if (gamepad2.y)
+            {
+                colorServoLeft.setPosition(0.1);
+                colorServoRight.setPosition(0.1);
+            }
+
             linearSlide = Range.clip(linearSlide, -1, 1);
             LeftSide = Range.clip(LeftSide, -1, 1);
             RightSide = Range.clip(RightSide, -1, 1);
